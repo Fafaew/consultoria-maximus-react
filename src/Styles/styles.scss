@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap');
+@import './_breakpoints';
 
 * {
   margin: 0;
@@ -24,6 +25,11 @@ header {
   color: var(--textColor);
 }
 
+.logo-header {
+  height: 70%;
+  padding-left: 10vw;
+}
+
 nav a {
   margin: 0 2rem;
   color: var(--textColor);
@@ -44,12 +50,19 @@ header .nav-btn {
   visibility: hidden;
   opacity: 0;
   font-size: 1.8rem;
+
+  @include media-lg {
+    display: none;
+  }
 }
 
-@media only screen and (max-width: 1024px) {
   header .nav-btn {
     visibility: visible;
     opacity: 1;
+
+    @include media-lg {
+      display: none;
+    }
   }
 
   header nav {
@@ -66,6 +79,12 @@ header .nav-btn {
     background-color: var(--mainColor);
     transition: 1s;
     transform: translateY(-100vh);
+
+    @include media-lg {
+      transform: none;
+      position: relative;
+      flex-direction: row;
+    }
   }
 
   header .responsive_nav {
@@ -81,4 +100,3 @@ header .nav-btn {
   nav a {
     font-size: 1.5rem;
   }
-}
