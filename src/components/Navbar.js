@@ -12,8 +12,8 @@ export default function Navbar() {
 
   return ( 
     <header>
-      <h3>logo</h3>
-      <nav ref={navRef}>
+      <img className="logo-header" src={require("../Assets/Img/logo.png")} alt="Logo Maximus"/> 
+      <nav ref={navRef} className="header-links">
         <a href="/">home</a>
         <a href="/">Work</a>
         <a href="/">Blog</a>
