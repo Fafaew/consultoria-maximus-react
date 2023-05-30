@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import '../Styles/styles.scss'
+import '../FunctionStyles/styles.scss'
 
 
 export default function Navbar() {
