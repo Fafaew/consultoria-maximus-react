@@ -12,8 +12,7 @@
   justify-content: space-between;
   height: 80px;
   padding: 0 2rem;
-  background-color: var(--mainColor);
-  color: var(--textColor);
+  margin-top: 0.5rem;
 }
 
 .logoHeader {
@@ -21,18 +20,8 @@
   padding-left: 10vw;
 }
 
-.nav a {
-  margin: 0 2rem;
-  color: var(--textColor);
-  text-decoration: none;
-  font-weight: $font-weight-semi-bold;
-}
-
-.nav a:hover {
-  color: $secondaryColor;
-}
-
 .header .navBtn {
+  margin-top: 1.5rem;
   padding: 5px;
   cursor: pointer;
   background: transparent;
@@ -42,6 +31,7 @@
   visibility: hidden;
   opacity: 0;
   font-size: 1.8rem;
+  color: $secondaryColor;
 
   @include media-lg {
     display: none;
@@ -84,11 +74,29 @@
     padding-left: 14px;
     margin-left: 20px;
     border-left: 1px solid $tertiary-color;
-
   }
+
 
   .header .responsiveNav {
     transform: none;
+    border-radius: 1rem;
+    background: white;
+    top: 55px;
+    left: 0.5rem;
+    width: 95%;
+    height: 90%;
+  }
+
+  .nav a {
+    margin: 0 2rem;
+    color: var(--textColor);
+    text-decoration: none;
+    font-weight: $font-weight-semi-bold;
+    font-size: 1.5rem;
+  }
+  
+  .nav a:hover {
+    color: $secondaryColor;
   }
 
   .nav .navCloseBtn {
@@ -97,6 +105,9 @@
     right: 2rem;
   }
 
-  .nav a {
-    font-size: 1.5rem;
+  .navOverlay {
+    background: rgba(0, 0, 0, 0.6);
+    width: 100vw;
+    height: 100vh;
+    transition: ease-in-out 0.2s;
   }
