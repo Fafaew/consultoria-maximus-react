@@ -17,13 +17,18 @@ export default function Navbar() {
       <header class={styles.header}>
         <img className={styles.logoHeader} src={require("../Assets/Img/logo.png")} alt="Logo Maximus"/>
         <nav ref={navRef} className={styles.nav}>
-          <a href="/">HOME</a>
-          <a href="/">QUEM SOMOS</a>
-          <a href="/">SERVIÇOS</a>
-          <a href="/">CONTATO</a>
-          <div className={styles.headerSocialLinks}>
-            <FaInstagram />
-            <FaLinkedin />
+          <ul className={styles.navHeaderList}>
+            <li><a href="/">HOME</a></li>
+            <li><a href="/">QUEM SOMOS</a></li>
+            <li><a href="/">SERVIÇOS</a></li>
+            <li><a href="/">CONTATO</a></li>
+          </ul>
+          <div className={styles.headerSocialContainer}>
+            <div className={styles.headerSocialLinks}>
+              <FaInstagram />
+              <FaLinkedin />
+            </div>
+            <img className={styles.logoNavOverlay} src={require("../Assets/Img/logo.png")} alt="Logo Maximus"/>
           </div>
           <button className={`${styles.navBtn} ${styles.navCloseBtn}`} onClick={showNavBar}>
             <FaTimes />
