@@ -25,8 +25,12 @@ export default function Navbar() {
           </ul>
           <div className={styles.headerSocialContainer}>
             <div className={styles.headerSocialLinks}>
-              <FaInstagram />
-              <FaLinkedin />
+              <button class={styles.socialLinksButton}>
+                <a href="http://www.instragram.com"><FaInstagram /></a>
+              </button>
+              <button class={styles.socialLinksButton}>
+              <a href="http://www.linkedin.com"><FaLinkedin /> </a>
+              </button>
             </div>
             <img className={styles.logoNavOverlay} src={require("../Assets/Img/logo.png")} alt="Logo Maximus"/>
           </div>
