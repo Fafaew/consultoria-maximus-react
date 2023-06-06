@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useRef } from "react";
 import { FaBars, FaTimes, FaInstagram, FaLinkedin } from "react-icons/fa";
 import styles from './Navbar.module.scss'
@@ -14,21 +15,21 @@ export default function Navbar() {
 
   return (
     <div className={styles.overlay} ref={navOverlay}>
-      <header class={styles.header}>
+      <header className={styles.header}>
         <img className={styles.logoHeader} src={require("../Assets/Img/logo.png")} alt="Logo Maximus"/>
         <nav ref={navRef} className={styles.nav}>
           <ul className={styles.navHeaderList}>
-            <li><a href="/">HOME</a></li>
-            <li><a href="/">QUEM SOMOS</a></li>
-            <li><a href="/">SERVIÇOS</a></li>
-            <li><a href="/">CONTATO</a></li>
+            <Link to="/" onClick={showNavBar}>HOME</Link>
+            <Link to="/about" onClick={showNavBar}>QUEM SOMOS</Link>
+            <Link to="/services" onClick={showNavBar}>SERVIÇOS</Link>
+            <Link to="/contact" onClick={showNavBar}>CONTATO</Link>
           </ul>
           <div className={styles.headerSocialContainer}>
             <div className={styles.headerSocialLinks}>
-              <button class={styles.socialLinksButton}>
+              <button className={styles.socialLinksButton}>
                 <a href="http://www.instragram.com"><FaInstagram /></a>
               </button>
-              <button class={styles.socialLinksButton}>
+              <button className={styles.socialLinksButton}>
               <a href="http://www.linkedin.com"><FaLinkedin /> </a>
               </button>
             </div>
