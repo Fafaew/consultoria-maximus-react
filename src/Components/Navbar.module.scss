@@ -9,6 +9,10 @@
   height: 80px;
   padding: 0 2rem;
   margin-top: 0.5rem;
+
+  @include media-lg {
+    margin-top: 1rem;
+  }
 }
 
 .logoHeader {
@@ -20,7 +24,7 @@
   display: grid;
   position: relative;
   list-style-type: none;
-  bottom: 21%;
+  bottom: 18%;
   right: 4rem;
   gap: 2rem;
 
@@ -43,7 +47,7 @@
   background: transparent;
   border: none;
   outline: none;
-  color: var(--textColor);
+  color: $primaryColor;
   visibility: hidden;
   opacity: 0;
   font-size: 1.8rem;
@@ -74,7 +78,6 @@
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
-  background-color: var(--mainColor);
   transition: 1s;
   transform: translateY(-100vh);
 
@@ -144,7 +147,7 @@
 
 .nav a {
   margin: 0 2rem;
-  color: var(--textColor);
+  color: $primaryColor;
   text-decoration: none;
   font-weight: $font-weight-medium;
   font-size: 1.5rem;
