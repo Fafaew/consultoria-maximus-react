@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { useRef } from "react";
 import { FaBars, FaTimes, FaInstagram, FaLinkedin } from "react-icons/fa";
-import styles from './Navbar.module.scss'
+import styles from './Navbar.module.scss';
+import logo from '../../Assets/Img/logo.png';
 
 
 export default function Navbar() {
@@ -21,7 +22,7 @@ export default function Navbar() {
   return (
     <div className={styles.overlay} ref={navOverlay}>
       <header className={styles.header}>
-        <img className={styles.logoHeader} src={require("../Assets/Img/logo.png")} alt="Logo Maximus"/>
+        <img className={styles.logoHeader} src={logo} alt="Logo Maximus"/>
         <nav ref={navRef} className={styles.nav}>
           <ul className={styles.navHeaderList}>
             <Link to="/" onClick={closeNavBar}>HOME</Link>
@@ -38,7 +39,7 @@ export default function Navbar() {
               <a href="http://www.linkedin.com"><FaLinkedin /> </a>
               </button>
             </div>
-            <img className={styles.logoNavOverlay} src={require("../Assets/Img/logo.png")} alt="Logo Maximus"/>
+            <img className={styles.logoNavOverlay} src={logo} alt="Logo Maximus"/>
           </div>
           <button className={`${styles.navBtn} ${styles.navCloseBtn}`} onClick={showNavBar}>
             <FaTimes />
