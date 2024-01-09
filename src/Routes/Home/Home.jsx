@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
+import Slider from '../../Components/Slider/Slider';
 
 const index = () => {
   return (
-    <div>Home</div>
+    <div>
+      <Slider />
+    </div>
   )
 }
 
