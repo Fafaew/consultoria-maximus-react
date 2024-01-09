@@ -1,19 +1,21 @@
-import slide1 from '../../Assets/Img/SliderImages/slide1.png'
+import slide1 from '../../Assets/Img/SliderImages/slide1.png';
+import slide2 from '../../Assets/Img/SliderImages/slide2.png';
+import slide3 from '../../Assets/Img/SliderImages/slide3.png';
 
 export const sliderData = [
   {
     image: slide1,
-    heading: "Slide One",
-    desc: "This is the description of slide one Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quos quas, voluptatum nesciunt illum exercitationem.",
+    heading: "Bem vindo(a) a Maximus",
+    desc: "Empresa de especializada em Consultoria e Perícia Contábil, pronta para resolver as demandas de maneira rápida e prática!",
   },
   {
-    image: "https://i.ibb.co/8gwwd4Q/slide2.jpg",
-    heading: "Slide Two",
-    desc: "This is the description of slide two Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quos quas, voluptatum nesciunt illum exercitationem.",
+    image: slide2,
+    heading: "Serviços",
+    desc: " Assessoria Tributária, Legalização Empresarial, Laudos Técnicos Cálculos Judiciais, Consultoria Tributária, Imposto de Renda e mais!",
   },
   {
-    image: "https://i.ibb.co/8r7WYJh/slide3.jpg",
-    heading: "Slide Three",
-    desc: "This is the description of slide three Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quos quas, voluptatum nesciunt illum exercitationem.",
+    image: slide3,
+    heading: "Nossos Cases",
+    desc: "Projetos desenvolvidos para clientes em diversas áreas: Indústria, Engenharia, Telefonia, Sindicatos, Microempreendedores, dentre outros. Confira!",
   },
 ];

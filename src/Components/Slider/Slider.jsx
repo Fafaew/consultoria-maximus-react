@@ -7,7 +7,7 @@ const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slideLength = sliderData.length;
 
-  const autoScroll = false;
+  const autoScroll = true;
   const slideIntervalRef = useRef(null);
   const intervalTime = 5000;
 
@@ -42,15 +42,15 @@ const Slider = () => {
       {sliderData.map((slide, index) => (
         <div className={index === currentSlide ? `${styles.slide} ${styles.current}` : `${styles.slide}`} key={index}>
           {index === currentSlide && (
-            <>
+            <div className={styles.slidesContainer}>
               <img className={styles.slideImage} src={slide.image} alt="slide" />
               <div className={styles.content}>
                 <h2>{slide.heading}</h2>
                 <p>{slide.desc}</p>
-                <hr />
-                <button className={`${styles.button} ${styles.buttonPrimary}`}> Get Started</button>
+                <hr  className={styles.horizontalRow}/>
+                <button className={`${styles.button} ${styles.buttonPrimary}`}> Mais </button>
               </div>
-            </>
+            </div>
           )}
         </div>
       ))}
