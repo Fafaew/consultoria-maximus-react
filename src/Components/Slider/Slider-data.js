@@ -1,6 +1,8 @@
+import slide1 from '../../Assets/Img/SliderImages/slide1.png'
+
 export const sliderData = [
   {
-    image: "https://i.ibb.co/58Mq6Mb/slide1.jpg",
+    image: slide1,
     heading: "Slide One",
     desc: "This is the description of slide one Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quos quas, voluptatum nesciunt illum exercitationem.",
   },
