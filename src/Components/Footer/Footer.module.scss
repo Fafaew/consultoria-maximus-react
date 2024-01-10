@@ -1,0 +1,16 @@
+@import '../../FunctionStyles/breakpoints';
+@import '../../FunctionStyles/variables';
+
+.footerContainer {
+  text-align: center;
+
+  background: radial-gradient(circle, rgba(0,255,76,1) 85%, rgba(27,189,54,1) 91%, rgba(27,189,54,1) 95%);
+
+  .footerText {
+    display: flex;
+    font-weight: 500;
+    height: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+}
