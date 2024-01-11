@@ -39,8 +39,8 @@ export default function Navbar() {
             >
               <Link onClick={toggleDropdown}>QUEM SOMOS <RiArrowDropDownLine className={styles.dropdownArrow} /> </Link>
               <ul className={styles.dropdown}>
-                <li><Link to="/about/team" onClick={closeNavBar}>Equipe</Link></li>
-                <li><Link to="/about/history" onClick={closeNavBar}>História</Link></li>
+                <li><Link to="/about" onClick={closeNavBar}>Sobre a Maximus</Link></li>
+                <li><Link to="/clients" onClick={closeNavBar}>Nossos Clientes</Link></li>
               </ul>
             </li>
             <Link to="/services" onClick={closeNavBar}>SERVIÇOS</Link>

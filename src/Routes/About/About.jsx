@@ -1,8 +1,14 @@
-import React from 'react'
+import React from 'react';
+import About from '../../Components/About/About';
+import Team from '../../Components/Team/Team';
 
 const index = () => {
   return (
-    <div>About</div>
+    <>
+      <About />
+      <Team />
+    </>
+
   )
 }
 
