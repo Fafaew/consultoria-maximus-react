@@ -28,10 +28,6 @@
   right: 4rem;
   gap: 2rem;
 
-  li a {
-    font-size: 1rem;
-  }
-
   @include media-lg {
     display: flex;
     bottom: 0;
@@ -39,6 +35,40 @@
     right: 0;
   }
 }
+
+.dropdownItem {
+  position: relative;
+  font-size: 1.5rem;
+  
+  &.open {
+    .dropdown {
+      display: block;
+      position: fixed;
+      left: 1rem;
+      list-style: none;
+    }
+  }
+
+  .dropdownArrow {
+    position: relative;
+    left: 1rem;
+    top: 6px;
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.dropdown {
+  display: none;
+  position: relative;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+
+
 
 .header .navBtn {
   margin-top: 1.5rem;
