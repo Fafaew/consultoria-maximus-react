@@ -8,6 +8,7 @@ import Contact from "./Routes/Contact/Contact";
 import Home from "./Routes/Home/Home";
 import Services from "./Routes/Services/Services";
 import ErrorPage from './Routes/ErrorPage/ErrorPage';
+import Clients from './Routes/Clients/Clients';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />
+      },
+      {
+        path: "/clients",
+        element: <Clients />
       },
       {
         path: "/contact",
