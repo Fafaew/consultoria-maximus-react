@@ -15,6 +15,10 @@
     font-weight: $font-weight-bold;
     text-align: center;
 
+    @include media-lg {
+      margin-top: 3rem;
+    }
+
     &:after {
       margin-top: 0.5rem;
       position: absolute;
