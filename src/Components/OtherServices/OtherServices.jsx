@@ -6,11 +6,6 @@ import { TfiWrite } from "react-icons/tfi";
 import { GiMagnifyingGlass  } from "react-icons/gi";
 import { MdOutlineBusinessCenter } from "react-icons/md";
 
-
-
-
-
-
 const OtherServices = () => {
   return (
     <div>
@@ -28,20 +23,20 @@ const OtherServices = () => {
             <h4 className={styles.otherServicesSubtitle}>Consultoria Tributária</h4>
           </div>
           <div className={styles.otherServicesItem}>
-            <RiMoneyDollarCircleLine className={styles.otherServicesIcon}/>
-            <h4 className={styles.otherServicesSubtitle}>Gestão de Folha de Pagamentos</h4>
-          </div>
-          <div className={styles.otherServicesItem}>
-            <TfiWrite className={styles.otherServicesIcon}/>
-            <h4 className={styles.otherServicesSubtitle}>Registro e Legalização Empresarial</h4>
-          </div>
-          <div className={styles.otherServicesItem}>
             <GiMagnifyingGlass className={styles.otherServicesIcon}/>
             <h4 className={styles.otherServicesSubtitle}>Auditoria</h4>
           </div>
           <div className={styles.otherServicesItem}>
             <MdOutlineBusinessCenter className={styles.otherServicesIcon}/>
             <h4 className={styles.otherServicesSubtitle}>Perícia Jurídica</h4>
+          </div>
+          <div className={styles.otherServicesItem}>
+            <RiMoneyDollarCircleLine className={styles.otherServicesIcon}/>
+            <h4 className={styles.otherServicesSubtitle}>Gestão de Folha de Pagamentos</h4>
+          </div>
+          <div className={styles.otherServicesItem}>
+            <TfiWrite className={styles.otherServicesIcon}/>
+            <h4 className={styles.otherServicesSubtitle}>Registro e Legalização Empresarial</h4>
           </div>
         </div>
       </div>
