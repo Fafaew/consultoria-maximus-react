@@ -1,0 +1,74 @@
+@import '../../FunctionStyles/breakpoints';
+@import '../../FunctionStyles/variables';
+
+.title {
+  font-size: 40px;
+  font-weight: $font-weight-bold;
+  text-align: center;
+
+  @include media-lg {
+    margin-top: 3rem;
+  }
+
+  &:after {
+    margin-top: 0.5rem;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    content: '';
+    display: block;
+    border-bottom: 4px solid $secondaryColor;
+    width: 15%;
+
+    @include media-md {
+      width: 5%;
+    }
+  }
+}
+
+.otherServicesContainer {
+  @include media-lg {
+    margin-top: 3rem;
+  }
+
+  .otherServicesWrapper {
+    margin-top: 3rem;
+    display: grid;
+    grid-gap: 2rem;
+
+    @include media-lg {
+      grid-template-columns: 1fr 1fr;
+      margin: 5rem 0 3rem 0 ;
+      grid-gap: 4rem;
+    }
+  }
+
+  .otherServicesItem {
+    padding: 20px 10px;
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+    @include media-lg {
+      padding: 60px 10px;
+      font-size: 20px;
+      justify-content: center;
+    }
+
+    .otherServicesIcon {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-left: 1rem;
+
+      @include media-lg {
+        margin-left: 0;
+      }
+    }
+
+    .otherServicesSubtitle {
+      margin-left: 1rem;
+    }
+  } 
+}

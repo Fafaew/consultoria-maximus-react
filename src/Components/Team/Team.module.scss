@@ -1,0 +1,50 @@
+@import '../../FunctionStyles/breakpoints';
+@import '../../FunctionStyles/variables';
+
+.teamContainer {
+
+  // height: 90vh;
+  padding: 40px 32px;
+  color: $primaryColor;
+  margin-top: 2rem;
+
+  @include media-lg {
+    height: 60vh;
+  }
+
+  .title {
+    font-size: 40px;
+    font-weight: $font-weight-bold;
+    text-align: center;
+
+    &:after {
+      margin-top: 0.5rem;
+      position: absolute;
+      transform: translateX(-50%);
+      left: 50%;
+      content: '';
+      display: block;
+      border-bottom: 4px solid $secondaryColor;
+      width: 15%;
+
+      @include media-md {
+        width: 5%;
+      }
+    }
+  }
+
+  .teamImages {
+    border-radius: 50%;
+    border: 4px solid $secondaryColor;
+    display: block;
+    margin: 4rem auto;
+  }
+
+  .teamWrapper {
+    text-align: center;
+
+    .TeamDescription {
+      margin-top: 1rem;
+    }
+  }
+}

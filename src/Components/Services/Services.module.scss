@@ -1,0 +1,82 @@
+@import '../../FunctionStyles/breakpoints';
+@import '../../FunctionStyles/variables';
+
+.servicesContainer {
+  margin-top: 2rem;
+  padding: 40px 32px;
+
+  @include media-lg {
+    margin-top: 0;
+    padding: 10px 140px;
+  }
+
+  .title {
+    font-size: 40px;
+    font-weight: $font-weight-bold;
+    text-align: center;
+
+    @include media-lg {
+      margin-top: 3rem;
+    }
+
+    &:after {
+      margin-top: 0.5rem;
+      position: absolute;
+      transform: translateX(-50%);
+      left: 50%;
+      content: '';
+      display: block;
+      border-bottom: 4px solid $secondaryColor;
+      width: 15%;
+
+      @include media-md {
+        width: 5%;
+      }
+    }
+  }
+
+  .description {
+    margin-top: 3rem;
+    text-align: center;
+  }
+
+  .servicesWrapper {
+    @include media-lg {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 3rem;
+      margin-top: 3rem;
+    }
+
+    .servicesItem {
+      text-align: center;
+      border: 1px solid $secondaryColor;
+      border-radius: 10px;
+      padding: 2rem;
+      margin-top: 2rem;
+      
+      
+      @include media-lg {
+        height: 250px;
+        margin-top: 0;
+      }
+
+      .servicesIcon {
+        width: 2rem;
+        height: 2rem;
+      }
+
+      .servicesTitle {
+        margin-top: 1rem;
+      }
+
+      .servicesDescription {
+        margin-top: 1rem;
+
+        @include media-lg {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

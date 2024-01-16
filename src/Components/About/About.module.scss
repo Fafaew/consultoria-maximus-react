@@ -1,0 +1,91 @@
+@import '../../FunctionStyles/variables';
+@import '../../FunctionStyles/breakpoints';
+
+.aboutContainer {
+  height: 90vh;
+  padding: 40px 32px;
+  color: $primaryColor;
+  margin-top: 2rem;
+
+  @include media-lg {
+    height: 60vh;
+  }
+
+  .title {
+    font-size: 40px;
+    font-weight: $font-weight-bold;
+    text-align: center;
+
+    &:after {
+      margin-top: 0.5rem;
+      position: absolute;
+      transform: translateX(-50%);
+      left: 50%;
+      content: '';
+      display: block;
+      border-bottom: 4px solid $secondaryColor;
+      width: 15%;
+
+      @include media-md {
+        width: 5%;
+      }
+    }
+  }
+
+  .aboutWrapper {
+    @include media-lg {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 3rem;
+    }
+
+    .subtitle {
+      font-size: 32px;
+      font-weight: $font-weight-semi-bold;
+      margin-top: 3rem;
+      text-align: center;
+    }
+  
+    .logoContainer {
+      text-align: center;
+      margin-top: 2rem;
+
+      @include media-lg {
+        grid-row: 2;
+      }
+  
+      .logo {
+        width: 200px;
+        height: 90px;
+        margin-top: 2rem;
+
+        @include media-lg {
+          margin-top: 1rem;
+        }
+      }
+    }
+  
+    .aboutDescription {
+      margin-top: 2rem;
+    }
+  
+    .aboutTopics {
+      margin-top: 1rem;
+      list-style: none;
+
+      @include media-lg {
+        margin-top: 0;
+      }
+  
+      .aboutItems {
+        margin-top: 1rem;
+      }
+  
+      .checkmark {
+        color: $secondaryColor;
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+    }
+  }
+}
