@@ -1,8 +1,12 @@
-import React from 'react'
+import React from 'react';
+import EmailForm from '../../Components/EmailForm/EmailForm';
+
 
 const index = () => {
   return (
-    <div>Contact</div>
+    <div>
+      <EmailForm />
+    </div>
   )
 }
 
