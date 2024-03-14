@@ -1,0 +1,40 @@
+@import '../../FunctionStyles/breakpoints';
+@import '../../FunctionStyles/variables';
+
+.contactWrapper {
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px 60px 60px 60px;
+  display: grid;
+  grid-gap: 2.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+
+  @include media-lg {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 60px;
+  }
+
+  .contactItem {
+    display: grid;
+    grid-gap: 8px;
+    grid-template-columns: 1fr 9fr;
+
+    .contactIcon svg{
+      border-radius: 50%;
+      border: 1px solid $secondaryColor;
+      padding: 5px;
+      font-size: 30px;
+    }
+
+    .contactIcon path {
+      color: $secondaryColor;
+    }
+
+    .contactSubtitle {
+      margin-bottom: 8px;
+    }
+
+
+  }
+}

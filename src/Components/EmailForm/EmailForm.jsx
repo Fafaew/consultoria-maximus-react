@@ -54,7 +54,7 @@ const EmailForm = () => {
         />
 
         <textarea 
-          className={styles.textarea}
+          className={`${styles.textarea} ${styles.input}`}
           placeholder="Digite sua mensagem..."
           onChange={(e) => setMessage(e.target.value)}
           value={message}
