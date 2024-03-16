@@ -15,13 +15,16 @@ export default function Navbar() {
   const toggleDropdown = () => setDropdownOpen(!isDropdownOpen);
 
   const showNavBar = () => {
-    navRef.current.classList.toggle(`${styles.responsiveNav}`)
-    navOverlay.current.classList.toggle(`${styles.navOverlay}`)
+    navRef.current.classList.toggle(`${styles.responsiveNav}`);
+    navOverlay.current.classList.toggle(`${styles.navOverlay}`);
+    document.body.style.overflow = "hidden";
+
   }
 
   const closeNavBar = () => {
     navRef.current.classList.remove(`${styles.responsiveNav}`);
     navOverlay.current.classList.remove(`${styles.navOverlay}`);
+    document.body.style.overflow = "unset";
     hideDropdown();
   }
 
@@ -30,21 +33,25 @@ export default function Navbar() {
   return (
     <div className={styles.overlay} ref={navOverlay}>
       <header className={styles.header}>
-        <img className={styles.logoHeader} src={logo} alt="Logo Maximus"/>
+        <div className={styles.logoHeaderWrapper}>
+          <Link to="/" onClick={closeNavBar}>
+            <img className={styles.logoHeader} src={logo} alt="Logo Maximus"/>
+          </Link>
+        </div>
         <nav ref={navRef} className={styles.nav}>
           <ul className={styles.navHeaderList}>
-            <Link to="/" onClick={closeNavBar}>HOME</Link>
+            <Link to="/" onClick={closeNavBar} className={styles.navItem}>HOME</Link>
             <li
               className={`${styles.dropdownItem} ${isDropdownOpen ? styles.open : ''}`}
             >
-              <Link onClick={toggleDropdown}>QUEM SOMOS <RiArrowDropDownLine className={styles.dropdownArrow} /> </Link>
+              <Link onClick={toggleDropdown} className={styles.navItem}>QUEM SOMOS <RiArrowDropDownLine className={styles.dropdownArrow} /> </Link>
               <ul className={styles.dropdown}>
-                <li><Link to="/about" onClick={closeNavBar}>Sobre a Maximus</Link></li>
-                <li><Link to="/clients" onClick={closeNavBar}>Nossos Clientes</Link></li>
+                <li className={styles.dropdownList}><Link to="/about/team" onClick={closeNavBar}>Equipe</Link></li>
+                <li><Link to="/about/history" onClick={closeNavBar}>História</Link></li>
               </ul>
             </li>
-            <Link to="/services" onClick={closeNavBar}>SERVIÇOS</Link>
-            <Link to="/contact" onClick={closeNavBar}>CONTATO</Link>
+            <Link to="/services" onClick={closeNavBar} className={styles.navItem}>SERVIÇOS</Link>
+            <Link to="/contact" onClick={closeNavBar} className={styles.navItem}>CONTATO</Link>
           </ul>
           <div className={styles.headerSocialContainer}>
             <div className={styles.headerSocialLinks}>
@@ -57,7 +64,7 @@ export default function Navbar() {
             </div>
             <img className={styles.logoNavOverlay} src={logo} alt="Logo Maximus"/>
           </div>
-          <button className={`${styles.navBtn} ${styles.navCloseBtn}`} onClick={showNavBar}>
+          <button className={`${styles.navBtn} ${styles.navCloseBtn}`} onClick={closeNavBar}>
             <FaTimes />
           </button>
         </nav>
