@@ -3,14 +3,9 @@
 
 .teamContainer {
 
-  // height: 90vh;
   padding: 40px 32px;
   color: $primaryColor;
   margin-top: 2rem;
-
-  @include media-lg {
-    height: 60vh;
-  }
 
   .title {
     font-size: 40px;

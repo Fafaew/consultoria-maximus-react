@@ -44,10 +44,10 @@ export default function Navbar() {
             <li
               className={`${styles.dropdownItem} ${isDropdownOpen ? styles.open : ''}`}
             >
-              <Link onClick={toggleDropdown} className={styles.navItem}>QUEM SOMOS <RiArrowDropDownLine className={styles.dropdownArrow} /> </Link>
+              <Link to="#" onClick={toggleDropdown} className={styles.navItem}>QUEM SOMOS <RiArrowDropDownLine className={styles.dropdownArrow} /> </Link>
               <ul className={styles.dropdown}>
                 <li className={styles.dropdownList}><Link to="/about/team" onClick={closeNavBar}>Equipe</Link></li>
-                <li><Link to="/about/history" onClick={closeNavBar}>História</Link></li>
+                <li><Link to="/about/clients" onClick={closeNavBar}>Clientes</Link></li>
               </ul>
             </li>
             <Link to="/services" onClick={closeNavBar} className={styles.navItem}>SERVIÇOS</Link>
@@ -56,10 +56,10 @@ export default function Navbar() {
           <div className={styles.headerSocialContainer}>
             <div className={styles.headerSocialLinks}>
               <button className={styles.socialLinksButton}>
-                <a href="http://www.instragram.com"><FaInstagram /></a>
+                <Link to="https://www.instragram.com/maximuspericiacontabil" target="_blank"><FaInstagram /></Link>
               </button>
               <button className={styles.socialLinksButton}>
-                <a href="http://www.linkedin.com"><FaLinkedin /> </a>
+                <Link to="https://www.linkedin.com/in/maximus-consultoria-e-per%C3%ADcia-cont%C3%A1bil-5786a3272/" target="_blank"><FaLinkedin /> </Link>
               </button>
             </div>
             <img className={styles.logoNavOverlay} src={logo} alt="Logo Maximus"/>
