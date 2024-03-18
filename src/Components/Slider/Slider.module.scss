@@ -62,16 +62,19 @@
 }
 
 .arrow {
-  border: 2px solid #fff;
+  border: 2px solid $secondaryColor;
   border-radius: 50%;
   background-color: transparent;
-  color: #fff;
   width: 2rem;
   height: 2rem;
   cursor: pointer;
   position: absolute;
   top: 45%;
   z-index: 2;
+
+  path {
+    color: $secondaryColor;
+  }
 
   &:hover {
     background-color: #fff;
@@ -89,6 +92,7 @@
 
 .horizontalRow {
   border: 1px solid $secondaryColor;
+  margin-bottom: 2rem;
 }
 
 .button {
@@ -96,4 +100,10 @@
   border-radius: 4px;
   padding: 12px 32px;
   background-color: transparent;
+  pointer-events: all;
+  font-size: 12px;
+
+  @include media-lg {
+    font-size: 16px;
+  }
 }

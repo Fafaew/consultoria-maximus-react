@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Slider.module.scss';
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { sliderData } from './Slider-data';
@@ -9,7 +10,7 @@ const Slider = () => {
 
   const autoScroll = true;
   const slideIntervalRef = useRef(null);
-  const intervalTime = 5000;
+  const intervalTime = 500000000000;
 
   const prevSlide = () => {
     setCurrentSlide(currentSlide === 0 ? slideLength - 1 : currentSlide - 1);
@@ -48,7 +49,7 @@ const Slider = () => {
                 <h2>{slide.heading}</h2>
                 <p>{slide.desc}</p>
                 <hr  className={styles.horizontalRow}/>
-                <button className={`${styles.button} ${styles.buttonPrimary}`}> Mais </button>
+                <Link to="/services" className={`${styles.button} ${styles.buttonPrimary}`}>Mais</Link>
               </div>
             </div>
           )}
