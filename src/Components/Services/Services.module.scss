@@ -8,6 +8,7 @@
   @include media-lg {
     margin-top: 0;
     padding: 10px 140px;
+    margin-bottom: 3rem;
   }
 
   .title {
@@ -57,7 +58,7 @@
       
       
       @include media-lg {
-        height: 250px;
+        height: auto;
         margin-top: 0;
       }
 
