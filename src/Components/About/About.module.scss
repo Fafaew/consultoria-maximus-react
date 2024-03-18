@@ -2,14 +2,13 @@
 @import '../../FunctionStyles/breakpoints';
 
 .aboutContainer {
-  // height: 90vh;
   padding: 40px 32px;
   color: $primaryColor;
   margin-top: 2rem;
   box-shadow: $box-shadow-light;
 
   @include media-lg {
-    height: 60vh;
+    height: auto;
   }
 
   .title {
