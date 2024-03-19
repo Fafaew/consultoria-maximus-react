@@ -1,0 +1,54 @@
+@import '../../FunctionStyles/breakpoints';
+@import '../../FunctionStyles/variables';
+
+.clientsContainer {
+  margin: 2rem 0;
+  display: grid;
+
+  .title {
+    font-size: 40px;
+    font-weight: $font-weight-bold;
+    text-align: center;
+
+    @include media-lg {
+      margin-top: 3rem;
+    }
+
+    &:after {
+      margin-top: 0.5rem;
+      position: absolute;
+      transform: translateX(-50%);
+      left: 50%;
+      content: '';
+      display: block;
+      border-bottom: 4px solid $secondaryColor;
+      width: 15%;
+
+      @include media-md {
+        width: 5%;
+      }
+    }
+  }
+
+  .clientsWrapper {
+    margin: auto;
+
+    @include media-lg {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 8rem;
+    }
+
+    .companyImage {
+      width: 20rem;
+      transition: background-color, transform 0.8s;
+
+
+      &:hover {
+        transform: scale(1.09);
+        transition: background-color, transform 0.8s;
+      }
+
+    }
+  }
+}
